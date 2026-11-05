@@ -1,0 +1,53 @@
+name: Build Windows VST3
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows-vst3:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify project files
+        shell: bash
+        run: python scripts/verify_project.py
+
+      - name: DSP self test (plain C++)
+        shell: pwsh
+        continue-on-error: true
+        run: |
+          cmake -S . -B build-tests -G "Visual Studio 17 2022" -A x64 -DMSC_BUILD_TESTS=ON
+          cmake --build build-tests --config Release --target msc_dsp_test
+          & ./build-tests/Release/msc_dsp_test.exe
+
+      - name: Configure (downloads JUCE automatically)
+        shell: pwsh
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+
+      - name: Build Release VST3
+        shell: pwsh
+        run: cmake --build build --config Release --parallel
+
+      - name: Package VST3
+        shell: pwsh
+        run: |
+          $vst3 = Get-ChildItem -Path build -Recurse -Directory -Filter "*.vst3" | Select-Object -First 1
+          if (-not $vst3) { throw "No .vst3 bundle was produced" }
+          Write-Host "Found: $($vst3.FullName)"
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          Copy-Item -Recurse -Force $vst3.FullName "dist/$($vst3.Name)"
+          Copy-Item README.md dist/README.md
+          Compress-Archive -Path "dist/*" -DestinationPath "MSC_VOXITY_2.0_VST3_Windows.zip" -Force
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MSC_VOXITY_2.0_VST3_Windows
+          path: MSC_VOXITY_2.0_VST3_Windows.zip
+          if-no-files-found: error
