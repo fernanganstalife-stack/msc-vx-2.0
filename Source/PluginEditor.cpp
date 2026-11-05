@@ -1,4 +1,5 @@
 #include "PluginEditor.h"
+#include <cstring>
 #include "UIComponents.h"
 
 using namespace msc;
@@ -97,7 +98,7 @@ public:
         for (auto& pd : panels)
         {
             auto& b = addPill (pd.onId, "ON");
-            if (pd.onId == juce::String (ids::atOn)) b.setBounds (pd.r.getX() + 16, pd.r.getY() + 40, 62, 36);
+            if (std::strcmp (pd.onId, ids::atOn) == 0) b.setBounds (pd.r.getX() + 16, pd.r.getY() + 40, 62, 36);
             else                                       b.setBounds (pd.r.getX() + 10, pd.r.getY() + 8, 44, 24);
         }
 
@@ -363,7 +364,7 @@ private:
         g.setColour (th.panelBorder);
         g.drawRoundedRectangle (f, 10.0f, 1.8f);
 
-        const bool big = onId != nullptr && juce::String (onId) == ids::atOn;
+        const bool big = onId != nullptr && std::strcmp (onId, ids::atOn) == 0;
         const float tx = big ? (float) r.getX() + 160.0f : (float) r.getX() + (onId != nullptr ? 64.0f : 16.0f);
         const float ty = big ? (float) r.getY() + 30.0f : (float) r.getY() + 20.0f;
         g.setColour (th.accent);
