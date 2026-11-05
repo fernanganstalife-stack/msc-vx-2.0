@@ -1,0 +1,19 @@
+{
+  "name": "Purple Punk",
+  "background": "#080311",
+  "panel": "#140926",
+  "panelBorder": "#582f9e",
+  "primary": "#945df4",
+  "accent": "#dbb2ff",
+  "highlight": "#ff72d7",
+  "text": "#ebe0ff",
+  "subtext": "#a88cd8",
+  "knobBody": "#352451",
+  "images": {
+    "banner": "banner_01_purple.jpg",
+    "singer": "singer_01_purple.png",
+    "guitarist": "guitarist_01_purple.png",
+    "deco": "deco_01_purple.jpg",
+    "title": "title_01_purple.jpg"
+  }
+}

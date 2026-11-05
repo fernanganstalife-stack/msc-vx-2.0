@@ -1,0 +1,19 @@
+{
+  "name": "Hot Pink",
+  "background": "#11030d",
+  "panel": "#26091e",
+  "panelBorder": "#9e2f7e",
+  "primary": "#f45dc9",
+  "accent": "#ffb2dc",
+  "highlight": "#ff8e72",
+  "text": "#ffe0f6",
+  "subtext": "#d88cc3",
+  "knobBody": "#512444",
+  "images": {
+    "banner": "banner_04_pink.jpg",
+    "singer": "singer_04_pink.png",
+    "guitarist": "guitarist_04_pink.png",
+    "deco": "deco_04_pink.jpg",
+    "title": "title_04_pink.jpg"
+  }
+}

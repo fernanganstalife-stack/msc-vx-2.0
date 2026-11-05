@@ -1,0 +1,19 @@
+{
+  "name": "Gold Rush",
+  "background": "#110903",
+  "panel": "#261609",
+  "panelBorder": "#9e612f",
+  "primary": "#f4a15d",
+  "accent": "#ffe1b2",
+  "highlight": "#cbff72",
+  "text": "#ffeee0",
+  "subtext": "#d8af8c",
+  "knobBody": "#513824",
+  "images": {
+    "banner": "banner_05_gold.jpg",
+    "singer": "singer_05_gold.png",
+    "guitarist": "guitarist_05_gold.png",
+    "deco": "deco_05_gold.jpg",
+    "title": "title_05_gold.jpg"
+  }
+}

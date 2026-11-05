@@ -1,0 +1,19 @@
+{
+  "name": "Toxic Green",
+  "background": "#031105",
+  "panel": "#09260c",
+  "panelBorder": "#2f9e3c",
+  "primary": "#5df46e",
+  "accent": "#b2ffc8",
+  "highlight": "#72faff",
+  "text": "#e0ffe3",
+  "subtext": "#8cd895",
+  "knobBody": "#245129",
+  "images": {
+    "banner": "banner_03_green.jpg",
+    "singer": "singer_03_green.png",
+    "guitarist": "guitarist_03_green.png",
+    "deco": "deco_03_green.jpg",
+    "title": "title_03_green.jpg"
+  }
+}

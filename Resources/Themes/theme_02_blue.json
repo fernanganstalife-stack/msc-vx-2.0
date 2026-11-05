@@ -1,0 +1,19 @@
+{
+  "name": "Midnight Blue",
+  "background": "#030c11",
+  "panel": "#091b26",
+  "panelBorder": "#2f759e",
+  "primary": "#5dbdf4",
+  "accent": "#b2d6ff",
+  "highlight": "#9a72ff",
+  "text": "#e0f3ff",
+  "subtext": "#8cbcd8",
+  "knobBody": "#244151",
+  "images": {
+    "banner": "banner_02_blue.jpg",
+    "singer": "singer_02_blue.png",
+    "guitarist": "guitarist_02_blue.png",
+    "deco": "deco_02_blue.jpg",
+    "title": "title_02_blue.jpg"
+  }
+}

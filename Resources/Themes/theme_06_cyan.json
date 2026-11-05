@@ -1,0 +1,19 @@
+{
+  "name": "Cyber Cyan",
+  "background": "#03110e",
+  "panel": "#092620",
+  "panelBorder": "#2f9e86",
+  "primary": "#5df4d3",
+  "accent": "#b2fffb",
+  "highlight": "#729cff",
+  "text": "#e0fff8",
+  "subtext": "#8cd8c8",
+  "knobBody": "#245147",
+  "images": {
+    "banner": "banner_06_cyan.jpg",
+    "singer": "singer_06_cyan.png",
+    "guitarist": "guitarist_06_cyan.png",
+    "deco": "deco_06_cyan.jpg",
+    "title": "title_06_cyan.jpg"
+  }
+}

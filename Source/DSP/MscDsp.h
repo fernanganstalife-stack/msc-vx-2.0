@@ -1,0 +1,18 @@
+#pragma once
+// Umbrella header for the plain C++ DSP layer.
+#include "DspUtils.h"
+#include "Biquad.h"
+#include "Oversampler.h"
+#include "PitchDetector.h"
+#include "PsolaShifter.h"
+#include "AutoTune.h"
+#include "Compressor.h"
+#include "DeEsser.h"
+#include "ParametricEQ.h"
+#include "Air.h"
+#include "Distortion.h"
+#include "Saturation.h"
+#include "Reverb.h"
+#include "Delay.h"
+#include "Chorus.h"
+#include "StereoWidener.h"
